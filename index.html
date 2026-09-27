@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Founding Declaration of Utilism</title>
+<meta name="description" content="The Founding Declaration of Utilism, declared the 27th day of September, 2026, by Given Taboga Manyane.">
+<meta name="author" content="Given Taboga Manyane">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lake:#114656;
+    --mark-light:#CFDADD;
+    --mark-mid:#7A97A0;
+    --paper:#EEF2F3;
+    --ink:#13262C;
+    --ink-soft:#4C5F65;
+    --accent:#114656;
+    --rule:rgba(17,70,86,.16);
+    --on-lake:#CFDADD;
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --body:"Spectral",Georgia,"Times New Roman",serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0A2830;
+      --ink:#E2EAEC;
+      --ink-soft:#A2B4B9;
+      --accent:#9DB5BC;
+      --rule:rgba(207,218,221,.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0A2830;
+    --ink:#E2EAEC;
+    --ink-soft:#A2B4B9;
+    --accent:#9DB5BC;
+    --rule:rgba(207,218,221,.16);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:clamp(1.05rem, 1rem + .3vw, 1.18rem);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  /* The lake: the mark sits on its ground */
+  .lake{
+    background:var(--lake);
+    color:var(--on-lake);
+    padding:calc(env(safe-area-inset-top, 0px) + 3.5rem) 1.5rem 3rem;
+    text-align:center;
+  }
+  .mark{
+    display:block;
+    width:clamp(8rem, 34vw, 12rem);
+    height:auto;
+    margin:0 auto 2rem;
+  }
+  h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(1.9rem, 1.3rem + 3vw, 3.1rem);
+    line-height:1.08;
+    letter-spacing:.04em;
+    margin:0;
+  }
+  h1 .of{
+    display:block;
+    font-weight:400;
+    font-style:normal;
+    letter-spacing:0;
+    font-size:.56em;
+    margin-top:.5rem;
+    opacity:.85;
+  }
+
+  main{
+    max-width:36rem;
+    margin:0 auto;
+    padding:3rem 1.5rem 1rem;
+  }
+  section{margin:0 0 2.6rem;}
+  h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.3em;
+    line-height:1.25;
+    margin:0 0 .7rem;
+  }
+  h2 .n{
+    color:var(--accent);
+    font-weight:400;
+    margin-right:.4em;
+  }
+
+  h3{
+    font-family:var(--body);
+    font-weight:600;
+    font-size:1em;
+    margin:1.5rem 0 .2rem;
+  }
+  p{margin:0 0 .9rem;}
+
+  .principles{
+    list-style:none;
+    margin:1rem 0 0;
+    padding:0;
+  }
+  .principles li{
+    padding:.85rem 0 .85rem 1.1rem;
+    border-left:2px solid var(--rule);
+    margin:0 0 .5rem;
+  }
+  .principles b{font-weight:600;}
+
+  .sign{
+    margin:3.5rem 0 0;
+    padding-top:1.8rem;
+    border-top:1px solid var(--rule);
+  }
+  .sign p{margin:0;}
+  .sign .signature{
+    display:block;
+    width:min(15rem, 70%);
+    height:auto;
+    margin:1.6rem 0 -.4rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .sign .signature{filter:invert(1) hue-rotate(180deg);}
+  }
+  :root[data-theme="dark"] .sign .signature{filter:invert(1) hue-rotate(180deg);}
+  .sign .founder{
+    margin-top:1.6rem;
+    font-family:var(--display);
+    font-size:1.2em;
+    font-weight:600;
+  }
+  .sign .signature + .founder{margin-top:.3rem;}
+  .sign .founder span{font-weight:400;color:var(--ink-soft);}
+  .sign .place{color:var(--ink-soft);}
+
+  /* Proof of date: quiet, below the act */
+  .proof{
+    max-width:36rem;
+    margin:3.5rem auto 0;
+    padding:2rem 1.5rem calc(env(safe-area-inset-bottom, 0px) + 3rem);
+    font-size:.86em;
+    line-height:1.6;
+    color:var(--ink-soft);
+  }
+  .proof h2{
+    font-size:1.1em;
+    color:var(--ink);
+    margin-bottom:.5rem;
+  }
+  .hash{
+    display:block;
+    margin:.4rem 0 1rem;
+    padding:.7rem .8rem;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:.92em;
+    color:var(--ink);
+    word-break:break-all;
+    user-select:all;
+  }
+  .files{margin:0 0 1rem;padding:0;list-style:none;}
+  .files li{margin:.2rem 0;}
+  a{color:var(--accent);text-underline-offset:.18em;}
+  a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<header class="lake">
+  <img class="mark" src="utile-drum-web.png" alt="The Utile Drum" onerror="this.remove()">
+  <h1>FOUNDING DECLARATION<span class="of">Of Utilism</span></h1>
+</header>
+
+<main>
+
+  <section>
+    <h2><span class="n">1.</span>The act</h2>
+    <p>I found Utilism: an economic doctrine and a new work order, built since 2019 and now complete and welded. Our world needs value held to real transformation over speculation, with exploitative gating and idle hoarding abolished.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">2.</span>Definition</h2>
+    <p>Utilism is an economic system where the transformation of collective resources creates utility, and the relevant service effort is rewarded for enabling usership.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">3.</span>The work order</h2>
+
+    <h3>Service.</h3>
+    <p>Service is outsourced energy — energy spent forming a resource for another party, so that another becomes its user. Service is only the energy sent outward, into another's use.</p>
+
+    <h3>Reward tied to outcome.</h3>
+    <p>Utility is the use another party gains. A transformation no one uses is no outcome, and earns nothing.</p>
+
+    <h3>The will to work.</h3>
+    <p>Utilism does not share reward by need or entitlement; it grants no idle credit. Reward flows to service formed, and credit to the hand that did the work.</p>
+
+    <h3>Efficiency and innovation.</h3>
+    <p>A lesser result earns less, so the saving can never come from thinning the work — only from finding a better way to the same result. The effort saved is the maker's to keep. Efficiency becomes the goal, and innovation is the search for it.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">4.</span>The principles</h2>
+    <p>The doctrine stands on six settled principles, in order:</p>
+    <ul class="principles">
+      <li><b>Distribution</b> — raw resources are collective dividends. Each person draws an equal share of the common stock, before any service is rendered. That dividend share is held by right. Reward is the formed result, held by work. One is given to all; the other is earned by the hand that forms.</li>
+      <li><b>Identity</b> — Service-Exclusive Trade. Only formed service crosses between parties; raw stock never trades.</li>
+      <li><b>Standard</b> — price is set by the class of service. Scope is bargained, never the rate.</li>
+      <li><b>Qualification</b> — reward requires transformation both called for and observed. What is formed must answer a present call for its use, and be observed in the forming. Nothing is paid on an unverified claim, nor on transformation made with no call beneath it.</li>
+      <li><b>Success</b> — utility is the measure, not profit. What matters is that the thing is used.</li>
+      <li><b>Rights</b> — usership over ownership. Every arrangement is read by who enabled whom to use what.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="n">5.</span>Reach</h2>
+    <p>Trade architecture at home and abroad functions alike. Commodity is never exported; what crosses outward is service and utility, made where the maker is. Skilled workforce may visit a foreign domain to deliver service, not to fall under foreign possession and command. Foreign exchange is state mandate solely to access resources and complex service beyond domestic reach.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">6.</span>Class structure</h2>
+    <p>There is one class. Every entity is a Fruitan of equal standing, drawing equal shares of the common stock by right. The war is not on any group but on conduct. An energy war between idle claimants and the ones who make use possible. A state to resist, not a caste to remove.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">7.</span>The correction</h2>
+    <p>Utilism is collectivism done right, through the road that arrives. Collectivist doctrines only gestured at that ultimate goal, the destination the human longing was reaching for. Every path there failed to arrive. Utilism designed the path.</p>
+  </section>
+
+  <section>
+    <h2><span class="n">8.</span>Standing</h2>
+    <p>This founding is given weight by the work behind it, and my decision to call it done. This declaration is that founding. From this day the doctrine is settled. Not forming.</p>
+  </section>
+
+  <div class="sign">
+    <p>Declared this 27th day of September, 2026,<br>by my own hand and under my own name.</p>
+    <img class="signature" src="signature.png" alt="Signature of Given Taboga Manyane" onerror="this.remove()">
+    <p class="founder"><span>Founder:</span> Given Taboga Manyane</p>
+    <p class="place">North West, South Africa</p>
+  </div>
+
+</main>
+
+<footer class="proof">
+  <h2>Proof of date</h2>
+  <p>The canonical text of this declaration is the plain-text file below. It was timestamped in the Bitcoin blockchain through OpenTimestamps on the day of declaring. This page shows that text; the file is what the timestamp proves.</p>
+  <p>SHA-256 of the canonical text:</p>
+  <code class="hash">d0629b028a0cab0dc7f86429b626f674d1ae89e9ba13df074ea172b89170f952</code>
+  <ul class="files">
+    <li><a href="founding-declaration-of-utilism.txt">Canonical text (.txt)</a></li>
+    <li><a href="founding-declaration-of-utilism.txt.ots">Timestamp proof (.ots)</a></li>
+  </ul>
+  <p>The Utile Drum mark was timestamped the same day, as its original image file:</p>
+  <ul class="files">
+    <li><a href="utile-drum.png">Utile Drum, original (.png)</a></li>
+    <li><a href="utile-drum.png.ots">Timestamp proof (.ots)</a></li>
+  </ul>
+  <p>To check a date, drop the file and its proof into <a href="https://opentimestamps.org">opentimestamps.org</a>.</p>
+</footer>
+
+</body>
+</html>
